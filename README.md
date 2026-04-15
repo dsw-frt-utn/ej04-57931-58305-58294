@@ -1,2 +1,12 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/39DJV9ho)
+# DESARROLLO DE SOFTWARE
+
+## EJERCICIO Nº4
+
+### *INTEGRANTES*
+
+1. 57931- Hidalgo Bevacqua, Lucia Victoria- Lucia.HidalgoBevacqua@alu.frt.utn.edu.ar
+2. 58305- Herrera, Lautaro Fabian- Lautaro.Herrera@alu.frt.utn.edu.ar
+3. 58294- Ferreyra, Lucas Tomas- cic1430.l.f@gmail.com
+
+
 
