@@ -53,6 +53,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
         totalConsumoCombustibleLabel = new javax.swing.JLabel();
         totalConsumoElectricosLabel = new javax.swing.JLabel();
         totalConsumoCombustibleValue = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Logística - Listar Vehículos");
@@ -72,6 +73,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(vehiculosGrid);
 
+        calcularConsumos.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         calcularConsumos.setText("Calcular Consumos");
         calcularConsumos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,18 +83,18 @@ public class ListarVehiculosView extends javax.swing.JFrame {
 
         panel.setBackground(new java.awt.Color(0, 204, 204));
 
-        totalConsumoElectricosValue.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        totalConsumoElectricosValue.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
         totalConsumoElectricosValue.setForeground(new java.awt.Color(255, 102, 51));
         totalConsumoElectricosValue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         totalConsumoElectricosValue.setText("0");
 
-        totalConsumoCombustibleLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        totalConsumoCombustibleLabel.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         totalConsumoCombustibleLabel.setText("Consumo Vehículos Combustible");
 
-        totalConsumoElectricosLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        totalConsumoElectricosLabel.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         totalConsumoElectricosLabel.setText("Consumo Vehículos Eléctricos");
 
-        totalConsumoCombustibleValue.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        totalConsumoCombustibleValue.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
         totalConsumoCombustibleValue.setForeground(new java.awt.Color(0, 0, 153));
         totalConsumoCombustibleValue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         totalConsumoCombustibleValue.setText("0");
@@ -126,6 +128,14 @@ public class ListarVehiculosView extends javax.swing.JFrame {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
+        jButton1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        jButton1.setText("Volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -135,7 +145,9 @@ public class ListarVehiculosView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 632, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(calcularConsumos, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(calcularConsumos, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -145,10 +157,13 @@ public class ListarVehiculosView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(calcularConsumos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(calcularConsumos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         pack();
@@ -164,6 +179,10 @@ public class ListarVehiculosView extends javax.swing.JFrame {
          totalConsumoElectricosValue.setText(String.format("%.2f%n kWh", consumos[0]));
          totalConsumoCombustibleValue.setText(String.format("%.2f%n litros", consumos[1]));
     }//GEN-LAST:event_calcularConsumosActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    Controlador.Cerrar3(this);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,6 +222,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton calcularConsumos;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panel;
     private javax.swing.JLabel totalConsumoCombustibleLabel;

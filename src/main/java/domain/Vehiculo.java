@@ -8,8 +8,9 @@ public abstract class Vehiculo {
     protected double capacidadCarga;
     protected Sucursal sucursal;
     private VehiculoTipo tipo;
+    private double km;
 
-    public Vehiculo(VehiculoTipo tipo, String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal) {
+    public Vehiculo(VehiculoTipo tipo, String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal,double km) {
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
@@ -17,6 +18,7 @@ public abstract class Vehiculo {
         this.capacidadCarga = capacidadCarga;
         this.sucursal = sucursal;
         this.tipo = tipo;
+        this.km = km;
     }
 
     public String getPatente() {
@@ -46,8 +48,20 @@ public abstract class Vehiculo {
     public boolean esDe(VehiculoTipo tipo){
         return this.tipo == tipo;
     }
+    
+    
+    
+    
     @Override
     public String toString() {
-        return patente + " - " + marca + " " + modelo + " - Sucursal: " + sucursal.getCodigo();
+        return  marca.getNombre() +" "+ modelo ;
+    }
+
+    public double getKm() {
+        return km;
+    }
+
+    public void setKm(double km) {
+        this.km = km;
     }
 }
