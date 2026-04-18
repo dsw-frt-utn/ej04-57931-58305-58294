@@ -33,6 +33,34 @@ public class Controlador {
         l.dispose();
         
      }
+         
+         
+         public static void MostrarList(){
+             ListarVehiculosView lt= new ListarVehiculosView();
+             lt.setVisible(true);
+             
+         }
+         
+      public static void MostrarAg(){
+          AgregarVehiculo ag= new AgregarVehiculo();
+          ag.setVisible(true);
+          
+          
+      }   
+         
+        public static void Cerrar(Menu l){
+            l.setVisible(false);
+        System.exit(0);
+        
+        
+     } 
+      
+            
+                 
+                 
+                 
+                 
+               
     
     public static double[] calcularConsumos(Map<String, Double> vehiculos){
         double consumoElectricos = 0;
